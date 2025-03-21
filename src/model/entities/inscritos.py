@@ -1,6 +1,6 @@
 from src.model.configs.base import base
 from sqlalchemy import Column, String, Integer
-class Subscriptions(Base):
+class inscritos(Base):
   __tablename__ = "Inscritos"
 
   id =  Column(Integer, primary_key=True, autoincrement=True)
