@@ -11,6 +11,8 @@ def test_insert():
 
     subs_repo = SubscribersRepository()
     subs_repo.insert(subscriber_info)
+    
+@pytest.mark.skip("Insert in DB")    
 def test_select_subscriber():
     email = "email22@email.com"
     event_id = 2

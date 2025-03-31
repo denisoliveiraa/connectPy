@@ -1,10 +1,10 @@
 from src.model.entities.inscritos import Inscritos
-from abc import ABC, abstractRepository
+from abc import ABC, abstractmethod
 
 class SubscribersRepositoryInterface(ABC):
-     @abstractRepository
+     @abstractmethod
      def insert(self, subscriber_infos: str) -> None: pass
 
-     @abstractRepository
+     @abstractmethod
      def select_subscriber(self, email: str, event_id: int ) -> Inscritos: pass
         
