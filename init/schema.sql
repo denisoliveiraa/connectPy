@@ -22,3 +22,12 @@ CREATE TABLE Eventos (
      FOREIGN KEY (evento_id) REFERENCES Eventos (id) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (inscrito_id) REFERENCES Inscritos (id) ON DELETE CASCADE ON UPDATE CASCADE
  )
+
+ CREATE TABLE Inscritos_group (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     group_name TEXT,
+     evento_id INTEGER,
+     inscrito_id INTEGER NOT NULL,
+     FOREIGN KEY (evento_id) REFERENCES Eventos (id) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (inscrito_id) REFERENCES Inscritos (id) ON DELETE CASCADE ON UPDATE CASCADE
+ )
